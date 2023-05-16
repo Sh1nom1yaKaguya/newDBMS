@@ -1,0 +1,2 @@
+sname,varchar,非主键,非空
+sno,varchar,非主键,可为空

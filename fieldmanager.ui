@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FieldManager</class>
+ <widget class="QWidget" name="FieldManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1364</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+background:rgb(255, 255, 255);
+font-size:px;
+	font: 16pt &quot;楷体&quot;;
+font-style:MingLiU-ExtB;
+}
+QFrame{
+border-style:outset;
+border-radius:15px;
+border:sold 10px rgba(0,0,0);
+background-color: rgba(255, 255, 255,0.5);
+}
+QLineEdit{
+color:#8d98a1;
+background-color:#405361;
+font-size:24px;
+border-style:outset;
+border-radius:10px;
+font-style:MingLiU-ExtB;
+}
+QPushButton{
+background:#ced1d8;
+border-style:outset;
+border-radius:10px;
+font-style:MingLiU-ExtB;
+}
+QPushButton:pressed{
+background-color:rgb(224,0,0);
+border-style:inset;
+font-style:MingLiU-ExtB;
+}
+QCheckBox{
+background:rgba(85,170,255,0);
+color:white;
+font-style:MingLiU-ExtB;
+}
+QLabel{
+background:rgba(85,170,255,0);
+color:white;
+font-style:MingLiU-ExtB;
+font-size:14px;
+}
+Qtableview{
+background-color: &quot;transparent&quot;;
+}
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1391</width>
+     <height>931</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(143, 216, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>460</y>
+     <width>941</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: &quot;transparent&quot;;</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="fieldName">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+background-color: rgb(108, 108, 108);
+font: 16pt &quot;楷体&quot;;</string>
+      </property>
+      <property name="text">
+       <string>字段名</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+font: 16pt &quot;楷体&quot;;
+background-color: rgb(108, 108, 108);
+</string>
+      </property>
+      <property name="text">
+       <string>数据类型</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+font: 16pt &quot;楷体&quot;;
+background-color: rgb(108, 108, 108);</string>
+      </property>
+      <property name="text">
+       <string>KEY</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Agency FB&quot;;
+font: 16pt &quot;楷体&quot;;
+background-color: rgb(108, 108, 108);</string>
+      </property>
+      <property name="text">
+       <string>NULL</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QComboBox" name="dataType">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>620</y>
+     <width>126</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>char</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>varchar</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>date</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>number</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="fieldNameEdit">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>610</y>
+     <width>221</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>从这里输入字段名</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="path">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>20</y>
+     <width>441</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(72, 72, 72);</string>
+   </property>
+   <property name="text">
+    <string>从这里输入表名</string>
+   </property>
+   <property name="placeholderText">
+    <string>请输入表名</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>740</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>添加字段</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="modify">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>740</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>修改字段</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dele">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>740</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>删除字段</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="display">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>211</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>点此展示表结构</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>20</y>
+     <width>171</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;字段管理部分&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="isPK">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>640</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(86, 86, 86);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="isNull">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>640</y>
+     <width>21</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(90, 90, 90);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>100</y>
+     <width>651</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget::item:hover
+
+
+background-color: rgb(255, 253, 174);
+</string>
+   </property>
+   <row>
+    <property name="text">
+     <string>这将用来展示表里的字段</string>
+    </property>
+   </row>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>610</y>
+     <width>151</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 14pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>设置为主键</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>620</y>
+     <width>211</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 14pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>设置为空（默认非空）</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="picture.qrc"/>
+ </resources>
+ <connections/>
+</ui>
